@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:id="@+id/movie_details"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/movie_title"
+                  android:hint="@string/movie_title"
+                  android:textStyle="bold"
+                  android:textColor="@android:color/black"
+                  android:fontFamily="sans-serif-condensed-medium"
+                  android:background="@color/colorPrimaryLight"
+                  android:textSize="@dimen/movie_title_size"
+                  android:padding="@dimen/padding_16dp"
+        />
+
+        <View style="@style/view"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:orientation="vertical">
+                <ImageView android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:id="@+id/movie_image"
+                           android:contentDescription="@string/app_name"
+                           android:scaleType="centerCrop"/>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"/>
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_weight="1">
+
+                <TextView style="@style/textView_style"
+                          android:id="@+id/movie_year"
+                          android:hint="@string/year_2019"/>
+
+                <TextView style="@style/textView_style"
+                          android:id="@+id/vote_count"
+                          android:hint="@string/votes"
+                />
+                <TextView style="@style/textView_style"
+                          android:id="@+id/rating"
+                          android:hint="@string/rating_hint"
+                />
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addFav"
+                        android:background="@color/colorPrimaryLight"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:padding="@dimen/padding_8dp"
+                        android:layout_margin="@dimen/margin_8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/view"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="32dp"
+                  android:text="@string/overview"
+                  android:textSize="24sp"
+                  android:textStyle="bold"
+                  android:layout_marginTop="16dp"
+                  android:layout_marginStart="@dimen/margin_8dp"
+                  android:layout_marginEnd="@dimen/margin_8dp"
+                  android:textColor="@android:color/black"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="24sp"
+                  android:layout_marginTop="16dp"
+                  android:layout_marginStart="@dimen/margin_8dp"
+                  android:layout_marginEnd="@dimen/margin_8dp"
+                  android:layout_marginBottom="@dimen/margin_8dp"
+                  android:id="@+id/description"
+                  android:textColor="@android:color/black"
+                  android:hint="@string/des_hint"/>
+    </LinearLayout>
+</LinearLayout>
